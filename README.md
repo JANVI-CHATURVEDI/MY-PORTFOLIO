@@ -1,4 +1,4 @@
-# Janvi Chaturvedi – Developer Portfolio
+# My Portfolio
 
 Welcome to my personal portfolio website! I'm Janvi Chaturvedi, an aspiring Software Development Engineer passionate about building meaningful tech solutions. This portfolio showcases my skills, projects, and journey in the world of software development.
 
@@ -25,4 +25,4 @@ Welcome to my personal portfolio website! I'm Janvi Chaturvedi, an aspiring Soft
 
 ---
 
-"# My-Portfolio" 
+
