@@ -1,0 +1,128 @@
+.po_items_ho {
+    column-width: 15em;
+    -moz-column-width: 15em;
+    -webkit-column-width: 15em;
+    column-gap: 4rem;
+    -moz-column-gap: 4rem;
+    -webkit-column-gap: 4rem;
+}
+
+.po_item {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem auto;
+    position: relative;
+    background: var(--secondary-color);
+    padding: 6px;
+    border: 1px solid var(--secondary-color);
+    transition: 0.3s ease;
+    font-size: 0;
+    min-height: 100px;
+}
+
+.po_item img {
+    max-width: 100%;
+    min-height:200px
+}
+
+.po_item .content {
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--overlay-color);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+    border: 1px solid black;
+}
+
+.po_item .content {
+    opacity: 0;
+    transition-delay: 1s;
+    transition: 0.3s ease;
+    font-size: 15px;
+}
+
+.po_item:hover {
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+.po_item:hover .content {
+    height: calc(100% - 30px);
+    width: calc(100% - 30px);
+    opacity: 1;
+}
+
+.po_item:hover .content {
+    opacity: 1;
+    color: var(--secondary-color);
+}
+
+.po_item .content a {
+    background: var(--bg-color);
+    border: solid 1px var(--text-color);
+    padding: 4px 8px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.po_item .content a:hover {
+    text-decoration: none;
+}
+
+
+.status-badge {
+  position: absolute;
+  top: 15px;
+  left: -40px;
+  background: black;               /* hacker black bg */
+  color: #00ff00;                  /* neon green */
+  font-size: 0.8rem;
+  font-family: "Courier New", monospace; /* hacker font */
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  text-align: center;
+  transform: rotate(-45deg);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.7);
+  border: 1px solid #00ff00;       /* neon green border */
+  border-radius: 2px;
+  letter-spacing: 1px;
+}
+
+/* blinking dot before text */
+.status-badge::before {
+  content: "●";
+  margin-right: 6px;
+  color: #00ff00;
+  animation: blink 1s infinite;
+}
+
+/* folded ribbon look */
+.status-badge::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-left: 10px solid #003300; /* darker green fold */
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+/* blink animation */
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
