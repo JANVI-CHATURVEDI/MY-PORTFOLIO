@@ -198,6 +198,12 @@ html[data-theme="dark"] .tag {
   padding: 6px 12px;
   color: #111;        /* dark text */
   margin: auto;
+  cursor: pointer;
+}
+
+.explore:hover {
+  background-color: #c0b9b9;  /* red for light mode */
+ 
 }
 
 /* Dark mode using data-theme */
