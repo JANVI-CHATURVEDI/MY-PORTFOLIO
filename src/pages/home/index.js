@@ -4,9 +4,15 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import { introdata, meta } from "../../content_option";
 import { Link } from "react-router-dom";
+import {Portfolio} from "../portfolio";
+import {ContactUs} from "../contact";
+import { About } from "../about";
+import Footer from "../../components/Footer";
+
 
 export const Home = () => {
   return (
+    <>
     <HelmetProvider>
       <section id="home" className="home">
         <Helmet>
@@ -61,6 +67,26 @@ export const Home = () => {
           </div>
         </div>
       </section>
+
+      
     </HelmetProvider>
+
+    <div className="mt-16 sm:mt-20">
+      <Portfolio />
+    </div>
+
+    <div className="mt-16 sm:mt-20">
+      <About />
+    </div>
+
+    <div className="mt-16 sm:mt-20 ">
+      <ContactUs />
+    </div>
+
+    <Footer />
+
+    
+
+    </>
   );
 };

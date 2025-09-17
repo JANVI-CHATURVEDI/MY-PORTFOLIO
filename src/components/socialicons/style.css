@@ -63,7 +63,7 @@
 }
 
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1280px) {
     .stick_follow_icon {
         width: unset;
         height: unset;
