@@ -29,7 +29,7 @@ export default function Footer() {
     }, []);
 
     return (
-        <footer className="mt-12 text-sm text-gray-600 dark:text-gray-700 py-6 border-t border-gray-300 dark:border-gray-700">
+        <footer className="mt-12 text-sm text-gray-600 dark:text-[#504949] py-6 border-t border-gray-300 dark:border-gray-700">
             <div className="max-w-4xl mx-auto flex justify-between items-center flex-wrap">
                 {/* Left column */}
                 <div className="flex flex-col space-y-1 text-left">
