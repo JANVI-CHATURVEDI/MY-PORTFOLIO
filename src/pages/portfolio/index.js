@@ -22,7 +22,7 @@ export const Portfolio = () => {
         <div className="mb-5 po_items_ho">
           {dataportfolio.map((data, i) => {
             return (
-              <div key={i} className="po_item">
+              <div key={i} className="po_item border-2 border-gray-300 ">
                 <div className="relative">
                   <img src={data.img} alt="" />
 
@@ -33,13 +33,29 @@ export const Portfolio = () => {
                 </div>
 
 
-                <div className="content">
+                <div className="content ">
 
-                  <p className="mb-3">{data.description}</p>
-                  <div className="flex gap-2 justify-between items-center">
+                  <p className="font-bold text-lg mb-0">{data.name}</p>
+                  <p className="mb-2">{data.description}</p>
 
-                    <a href={data.link}>view project</a>
-                    <a href={data.github}>view code</a>
+                  <p className="font-medium text-sm">Technologies used :</p>
+
+                  <ul className="tags flex flex-wrap gap-2 mb-12">
+                    {data.tags.map((tag, index) => (
+                      <li
+                        key={index}
+                        className="tag"
+                      >
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+
+
+
+                  <div className="flex gap-2 justify-between absolute bottom-1 left-0 w-full px-4">
+                    <a href={data.link} className="underline">Live</a>
+                    <a href={data.github} className="underline" >Github</a>
                   </div>
                 </div>
               </div>
@@ -50,3 +66,4 @@ export const Portfolio = () => {
     </HelmetProvider>
   );
 };
+

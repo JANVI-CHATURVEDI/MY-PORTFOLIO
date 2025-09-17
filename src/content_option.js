@@ -8,6 +8,7 @@ import cofeeimg from "./assets/images/cofeelanding.png" ;
 import devlinktreeimg from "./assets/images/devlinktreelanding.png" ;
 import travelimg from "./assets/images/travellanding.png" ;
 import onetimeimg from "./assets/images/onetimelanding.png" ;
+import profileimg from "./assets/images/image1.png" ;
 
 const logotext = "JANVI";
 const meta = {
@@ -90,42 +91,57 @@ const services = [
 
 const dataportfolio = [
   {
-    // Twitter-like app image variable you already used
+    name: "Tweet",
     img: tweetimg,
-    description: "Twitter Clone — A simple Twitter-like web app where users can post and view tweets. Built with Django (Python), Tailwind CSS, and PostgreSQL.",
+    description:
+      "A mini Twitter-like platform where users can share and view posts in real-time. Focused on clean UI and efficient backend handling.",
     link: "#",
     github: "#",
     status: "completed",
+    tags: ["Django", "Python", "Tailwind CSS", "PostgreSQL"],
   },
   {
+    name: "Dev LinkTree",
     img: devlinktreeimg,
-    description: "Dev LinkTree — A customizable 'Link in Bio' tool to visually build a personal profile layout with images, notes, background styles, and social links. Frontend: HTML + Tailwind + vanilla JS.",
+    description:
+      "A fully customizable 'Link in Bio' builder where users can add images, notes, social links, and backgrounds with live preview.",
     link: "https://dev-link-tree.vercel.app/",
     github: "#",
     status: "in-progress",
+    tags: ["HTML", "Tailwind CSS", "Vanilla JS"],
   },
   {
+    name: "Cofeeshop Landing Page",
     img: cofeeimg,
-    description: "Cofeeshop Landing Page — A clean, modern landing page for a coffee shop. Fully responsive and styled with Tailwind CSS.",
+    description:
+      "A modern, responsive landing page design for a coffee shop, optimized for mobile and desktop screens.",
     link: "https://cofeeshop-kappa.vercel.app/",
     github: "#",
     status: "completed",
+    tags: ["Tailwind CSS", "Responsive Design"],
   },
   {
+    name: "One-Time Secret App",
     img: onetimeimg,
-    description: "One-Time Secret App — Send messages that self-destruct after first view. Built with React, Appwrite, and Tailwind CSS.",
+    description:
+      "A secure messaging app where messages auto-delete after being read once. Ensures privacy with backend integration.",
     link: "https://one-time-msg.vercel.app/",
     github: "#",
     status: "completed",
+    tags: ["React", "Appwrite", "Tailwind CSS"],
   },
   {
+    name: "Travel Destination Explorer",
     img: travelimg,
-    description: "Travel Destination Explorer — Discover places, filter by vibes, and explore on a map. Built with React, Tailwind CSS, and Leaflet.js.",
+    description:
+      "A map-based explorer to discover destinations, filter by vibe, and view interactive maps with rich details.",
     link: "https://travel-destination-explorer-neon.vercel.app/",
     github: "#",
     status: "in-progress",
+    tags: ["React", "Tailwind CSS", "Leaflet.js"],
   },
 ];
+
 
 
 const contactConfig = {
