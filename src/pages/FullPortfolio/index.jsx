@@ -3,9 +3,9 @@ import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta } from "../../content_option";
-import { Link } from "react-router-dom";
+import Footer from "../../components/Footer";
 
-export const Portfolio = () => {
+export const FullPortfolio = () => {
   return (
     <HelmetProvider>
       <Container className="About-header">
@@ -18,11 +18,11 @@ export const Portfolio = () => {
           <Col lg="8">
             <h1 className="display-4 mb-4"> Portfolio  </h1>
             <hr className="t_border my-4 ml-0 text-left" />
-            <h2>Projects that shaped my learning journey.</h2>
+            <h2>These projects are more than just code—they’re lessons, experiments, and milestones. Each one was built with purpose: to learn something new, to challenge myself, or to solve a problem I cared about. What you’ll see here is the result of curiosity meeting code.</h2>
           </Col>
         </Row>
         <div className="mb-5 po_items_ho">
-          {dataportfolio.slice(0, 3).map((data, i) => {
+          {dataportfolio.map((data, i) => {
             return (
               <div key={i} className="po_item border-2 border-gray-300 ">
                 <div className="relative">
@@ -64,12 +64,9 @@ export const Portfolio = () => {
             );
           })}
         </div>
-
-        <Link to="/portfolio" className="explore">
-          Explore More
-        </Link>
-
+        
       </Container>
+        <Footer />
     </HelmetProvider>
   );
 };

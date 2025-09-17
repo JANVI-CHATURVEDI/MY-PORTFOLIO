@@ -2,13 +2,14 @@ import { FaPython, FaReact, FaJsSquare, FaHtml5, FaCss3Alt, FaBootstrap, FaGitAl
 import { SiDjango, SiTailwindcss, SiSqlite, SiPostgresql, SiGithub, SiFirebase, SiFigma } from "react-icons/si";
 import { GiPositionMarker } from "react-icons/gi"; // for Leaflet map (marker icon)
 
+
 import img from "./assets/images/homeimg.jfif";
 import tweetimg from "./assets/images/tweetlanding.png" ;
 import cofeeimg from "./assets/images/cofeelanding.png" ;
 import devlinktreeimg from "./assets/images/devlinktreelanding.png" ;
 import travelimg from "./assets/images/travellanding.png" ;
 import onetimeimg from "./assets/images/onetimelanding.png" ;
-import profileimg from "./assets/images/image1.png" ;
+
 
 const logotext = "JANVI";
 const meta = {
@@ -118,7 +119,7 @@ const dataportfolio = [
     link: "https://cofeeshop-kappa.vercel.app/",
     github: "#",
     status: "completed",
-    tags: ["Tailwind CSS", "Responsive Design"],
+    tags: ["Tailwind CSS", "HTML"],
   },
   {
     name: "One-Time Secret App",

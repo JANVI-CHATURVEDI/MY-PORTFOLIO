@@ -185,23 +185,3 @@ html[data-theme="dark"] .tag {
   background-color: #302f2f;  /* dark grey */
   color: #f0f0f0;             /* light text */
 }
-
-
-/* Light mode (default) */
-.explore {
-  display: flex;
-  width : 200px;
-  justify-content: center;
-    align-items: center;
-  margin-top: 2px;
-  background-color: #eae5e5;  /* red for light mode */
-  padding: 6px 12px;
-  color: #111;        /* dark text */
-  margin: auto;
-}
-
-/* Dark mode using data-theme */
-html[data-theme="dark"] .explore {
-  background-color: #302f2f;  /* dark grey */
-  color: #f0f0f0;             /* light text */
-}
