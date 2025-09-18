@@ -96,8 +96,8 @@ const dataportfolio = [
     img: tweetimg,
     description:
       "A mini Twitter-like platform where users can share and view posts in real-time. Focused on clean UI and efficient backend handling.",
-    link: "#",
-    github: "#",
+    link: "https://tweet-hveo.onrender.com",
+    github: "https://github.com/JANVI-CHATURVEDI/TWEET",
     status: "completed",
     tags: ["Django", "Python", "Tailwind CSS", "PostgreSQL"],
   },
@@ -107,7 +107,7 @@ const dataportfolio = [
     description:
       "A fully customizable 'Link in Bio' builder where users can add images, notes, social links, and backgrounds with live preview.",
     link: "https://dev-link-tree.vercel.app/",
-    github: "#",
+    github: "https://github.com/JANVI-CHATURVEDI/DevLinkTree",
     status: "in-progress",
     tags: ["HTML", "Tailwind CSS", "Vanilla JS"],
   },
@@ -117,7 +117,7 @@ const dataportfolio = [
     description:
       "A modern, responsive landing page design for a coffee shop, optimized for mobile and desktop screens.",
     link: "https://cofeeshop-kappa.vercel.app/",
-    github: "#",
+    github: "https://github.com/JANVI-CHATURVEDI/Cofeeshop",
     status: "completed",
     tags: ["Tailwind CSS", "HTML"],
   },
@@ -127,7 +127,7 @@ const dataportfolio = [
     description:
       "A secure messaging app where messages auto-delete after being read once. Ensures privacy with backend integration.",
     link: "https://one-time-msg.vercel.app/",
-    github: "#",
+    github: "https://github.com/JANVI-CHATURVEDI/one-time-msg",
     status: "completed",
     tags: ["React", "Appwrite", "Tailwind CSS"],
   },
@@ -137,7 +137,7 @@ const dataportfolio = [
     description:
       "A map-based explorer to discover destinations, filter by vibe, and view interactive maps with rich details.",
     link: "https://travel-destination-explorer-neon.vercel.app/",
-    github: "#",
+    github: "https://github.com/JANVI-CHATURVEDI/Travel-Destination-Explorer",
     status: "in-progress",
     tags: ["React", "Tailwind CSS", "Leaflet.js"],
   },
@@ -148,7 +148,7 @@ const dataportfolio = [
 const contactConfig = {
     YOUR_EMAIL: "janvichaturvedi82@gmail.com",
     
-    description: "Feel free to connect with me for collaboration, internship opportunities, or frontend projects.",
+    description: "Feel free to connect with me for collaboration, internship opportunities, or projects.",
     // creat an emailjs.com account if you want to enable contact form
     YOUR_SERVICE_ID: "service_id",
     YOUR_TEMPLATE_ID: "template_id",

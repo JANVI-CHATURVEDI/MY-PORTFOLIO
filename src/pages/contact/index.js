@@ -19,40 +19,58 @@ export const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormdata({ loading: true });
+
+    // Start loading
+    setFormdata({ ...formData, loading: true });
 
     const templateParams = {
-      from_name: formData.email,
-      user_name: formData.name,
+      from_name: formData.name,
+      from_email: formData.email,
       to_name: contactConfig.YOUR_EMAIL,
       message: formData.message,
     };
 
     emailjs
       .send(
-        contactConfig.YOUR_SERVICE_ID,
-        contactConfig.YOUR_TEMPLATE_ID,
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         templateParams,
-        contactConfig.YOUR_USER_ID
+        process.env.REACT_APP_EMAILJS_USER_ID
       )
       .then(
         (result) => {
           console.log(result.text);
           setFormdata({
+            ...formData,
             loading: false,
-            alertmessage: "SUCCESS! ,Thankyou for your messege",
+            alertmessage: "SUCCESS! Thank you for your message.",
             variant: "success",
             show: true,
+            name: "",
+            email: "",
+            message: "",
           });
+
+          // Auto hide after 4s
+          setTimeout(() => {
+            setFormdata((prev) => ({ ...prev, show: false }));
+          }, 4000);
         },
         (error) => {
           console.log(error.text);
           setFormdata({
-            alertmessage: `Faild to send!,${error.text}`,
+            ...formData,
+            loading: false,
+            alertmessage: `Failed to send! ${error.text}`,
             variant: "danger",
             show: true,
           });
           document.getElementsByClassName("co_alert")[0].scrollIntoView();
+
+          // Auto hide after 4s
+          setTimeout(() => {
+            setFormdata((prev) => ({ ...prev, show: false }));
+          }, 4000);
         }
       );
   };
@@ -81,12 +99,11 @@ export const ContactUs = () => {
         <Row className="sec_sp">
           <Col lg="12">
             <Alert
-              //show={formData.show}
               variant={formData.variant}
               className={`rounded-0 co_alert ${
                 formData.show ? "d-block" : "d-none"
               }`}
-              onClose={() => setFormdata({ show: false })}
+              onClose={() => setFormdata({ ...formData, show: false })}
               dismissible
             >
               <p className="my-0">{formData.alertmessage}</p>
@@ -101,7 +118,6 @@ export const ContactUs = () => {
               </a>
               <br />
               <br />
-              
             </address>
             <p>{contactConfig.description}</p>
           </Col>
@@ -114,7 +130,7 @@ export const ContactUs = () => {
                     id="name"
                     name="name"
                     placeholder="Name"
-                    value={formData.name || ""}
+                    value={formData.name}
                     type="text"
                     required
                     onChange={handleChange}
@@ -127,7 +143,7 @@ export const ContactUs = () => {
                     name="email"
                     placeholder="Email"
                     type="email"
-                    value={formData.email || ""}
+                    value={formData.email}
                     required
                     onChange={handleChange}
                   />

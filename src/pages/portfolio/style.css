@@ -65,7 +65,8 @@
     top: 15px;
     left: -40px;
     background: black;
-    color: #00ff00;
+    /* color: #00ff00; */
+    color: #bb83ef;
     font-size: 0.8rem;
     font-family: "Courier New", monospace;
     font-weight: bold;
@@ -74,7 +75,7 @@
     text-align: center;
     transform: rotate(-45deg);
     box-shadow: 0 3px 6px rgba(0,0,0,0.7);
-    border: 1px solid #00ff00;
+    border: 1px solid #9942ea;
     border-radius: 2px;
     letter-spacing: 1px;
     
@@ -82,8 +83,8 @@
 .status-badge::before {
     content: "●";
     margin-right: 6px;
-    color: #00ff00;
-    animation: blink 1s infinite;
+    color: #bb83ef;
+    animation: blink 2s infinite;
 }
 .status-badge::after {
     content: "";

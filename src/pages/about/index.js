@@ -24,7 +24,32 @@ export const About = () => {
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
+
+
         <Row className="sec_sp">
+          <Col lg="5">
+            <h3 className="color_sec py-4">About Me</h3>
+          </Col>
+          <Col lg="7" className="d-flex align-items-center">
+            <div>
+              <p className="about-text mb-2">
+                I am a <strong>full-stack developer</strong> with expertise in Python, Django, React,
+                and modern CSS frameworks like Tailwind and Bootstrap. I design and develop
+                end-to-end web applications — from intuitive UIs to robust backends and databases.
+                I thrive on solving real-world problems, continuously improving my skills, and
+                building scalable digital products with clean architecture and responsive design.
+              </p>
+
+              <p className="about-text">
+                Outside of tech, I am a sports enthusiast who has won medals in Kho-Kho,
+                and I enjoy listening to music, which keeps me inspired and creative.
+              </p>
+            </div>
+          </Col>
+        </Row>
+
+
+        {/* <Row className="sec_sp">
           <Col lg="5">
             <h3 className="color_sec py-4">{dataabout.title}</h3>
           </Col>
@@ -36,7 +61,7 @@ export const About = () => {
 
             </div>
           </Col>
-        </Row>
+        </Row> */}
 
         <Row className="sec_sp">
           <Col lg="5">
